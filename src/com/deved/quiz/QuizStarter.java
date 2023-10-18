@@ -13,7 +13,7 @@ public class QuizStarter {
         System.out.println("********************");
     }
 
-    public void start() {
+    public void start() throws StopGameException {
         Scanner input = new Scanner(System.in);
         String playerName;
 
@@ -30,8 +30,8 @@ public class QuizStarter {
                 System.out.println("Start game");
                 break; // Exit the loop and start the quiz when 1 is pressed
             } else if (start == 2) {
-                System.out.println("Stopping game");
-                return; // Exit the method when 2 is pressed
+                throw new StopGameException("You have stopped the game");
+                // Exit the method when 2 is pressed
             } else {
                 System.out.println("Enter a valid number (1 or 2)");
             }

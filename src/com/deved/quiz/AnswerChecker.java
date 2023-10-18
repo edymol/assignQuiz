@@ -7,6 +7,7 @@ public class AnswerChecker {
         int score = 0;
         int points = 0;
         int nQuestions = 0;
+        int possiblePoints = 0;
         Scanner input = new Scanner(System.in);
 
         System.out.println("Let's begin the quiz!");
@@ -31,23 +32,24 @@ public class AnswerChecker {
             if (userAnswer.equals(String.valueOf((char) ('A' + correctAnswerIndex)))) {
                 nQuestions++;
                 System.out.println("Correct!");
+                if (question.difficulty().equals("Easy")) {
+                    points = score += 2;
+                    possiblePoints += points;
+                } else if (question.difficulty().equals("Medium")) {
+                    points = score += 3;
+                    possiblePoints += points;
+                } else {
+                    points = score += 5;
+                    possiblePoints += points;
+                }
             } else {
                 System.out.println("Incorrect. The correct answer is: " + correctAnswer);
             }
-            if(question.difficulty().equals("easy")){
-                score = points += 2;
-            } else if (question.difficulty().equals("Medium")) {
-                score = points += 3;
-
-            } else {
-                score = points += 5;
-            }
-
         }
-
         System.out.println("Quiz complete!");
-        System.out.println("You have " + nQuestions + " correct answers");
-        System.out.println("Your score: " + score + " out of " + questions.length);
+//        System.out.println("You have " + nQuestions + " correct answers");
+        System.out.println("Your score: " + nQuestions + " out of " + questions.length + " questions and "
+                + possiblePoints +" possible points");
 
         return score;
     }

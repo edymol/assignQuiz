@@ -2,10 +2,14 @@ package com.deved.quiz;
 
 public class Quiz {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws StopGameException {
         QuizStarter gameStarter = new QuizStarter();
         gameStarter.greeting();
-        gameStarter.start();
+        try {
+            gameStarter.start();
+        }catch (StopGameException exit){
+            System.out.println(exit.getMessage());
 
+        }
     }
 }
