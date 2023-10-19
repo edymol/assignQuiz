@@ -23,7 +23,7 @@ public class MultipleChoiceChecker {
                 System.out.println((char) ('A' + j) + ". " + options[j]);
             }
 
-            System.out.print("Your answer (A, B, C, D or True or False): ");
+            System.out.print("Your answer (A, B, C, D): ");
             String userAnswer = input.next().toUpperCase();
 
             int correctAnswerIndex = question.correctAnswerIndex();
@@ -46,7 +46,7 @@ public class MultipleChoiceChecker {
                 System.out.println("Incorrect. The correct answer is: " + correctAnswer);
             }
         }
-        System.out.println("Quiz complete!");
+
 //        System.out.println("You have " + nQuestions + " correct answers");
         System.out.println("Your score: " + nQuestions + " out of " + questions.length + " questions and "
                 + possiblePoints +" possible points");

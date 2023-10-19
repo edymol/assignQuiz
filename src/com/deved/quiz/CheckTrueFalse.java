@@ -43,6 +43,7 @@ public class CheckTrueFalse {
                 System.out.println("Incorrect. The correct answer is: " + correctAnswer);
             }
         }
+        System.out.println("Quiz complete!");
         System.out.println("True False score is: " + points);
         System.out.println("Possible points in this section is: " + possiblePoints);
         return scoreTF;

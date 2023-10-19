@@ -172,18 +172,18 @@ public class QuestionProvider {
 //                                "The automatic generation of constructors"},
 //                        0,
 //                        "Hard"),
-//                new QuizQuestion(
-//                        "What is the 'assert' statement in Java used for?",
-//                        new String[]{"To check for program correctness during development",
-//                                "To print a message to the console", "To declare a variable", "To handle exceptions"},
-//                        0,
-//                        "Hard"),
-//                new QuizQuestion(
-//                        "What is the 'ClassNotFoundException' in Java?",
-//                        new String[]{"An exception that occurs when a class is not found at runtime",
-//                                "A built-in Java class", "A type of data structure", "A common error in Java programs"},
-//                        0,
-//                        "Hard"),
+                new QuizQuestion(
+                        "What is the 'assert' statement in Java used for?",
+                        new String[]{"To check for program correctness during development",
+                                "To print a message to the console", "To declare a variable", "To handle exceptions"},
+                        0,
+                        "Hard"),
+                new QuizQuestion(
+                        "What is the 'ClassNotFoundException' in Java?",
+                        new String[]{"An exception that occurs when a class is not found at runtime",
+                                "A built-in Java class", "A type of data structure", "A common error in Java programs"},
+                        0,
+                        "Hard"),
                 new QuizQuestion(
                         "What is the 'java.nio' package in Java?",
                         new String[]{"A package for non-blocking I/O operations", "A package for GUI components",
