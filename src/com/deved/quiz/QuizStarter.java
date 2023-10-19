@@ -15,10 +15,10 @@ public class QuizStarter {
 
     public void start() throws StopGameException {
         Scanner input = new Scanner(System.in);
-        String playerName;
+        StringBuilder playerName;
 
         System.out.println("Enter your name: ");
-        playerName = input.nextLine().toUpperCase();
+        playerName = new StringBuilder(input.nextLine().toUpperCase());
 
         int start;
 
@@ -38,11 +38,14 @@ public class QuizStarter {
         }
 
         QuestionProvider questionProvider = new QuestionProvider();
+        TrueFalseArray trueFalseArray = new TrueFalseArray();
         QuizQuestion[] questions = questionProvider.initializeQuestions();
-
-        AnswerChecker answerChecker = new AnswerChecker();
+        QuizQuestion[] trueFalse = trueFalseArray.trueFalseQuestion();
+        MultipleChoiceChecker answerChecker = new MultipleChoiceChecker();
+        CheckTrueFalse checkTF = new CheckTrueFalse();
         int score = answerChecker.checkAnswers(questions);
-        System.out.println("Base on level of difficulty you have " +score + "points");
+        int scoreTF = checkTF.checkTF(trueFalse);
+        System.out.println("Base on level of difficulty you have " +score + scoreTF + " points");
 
     }
 }

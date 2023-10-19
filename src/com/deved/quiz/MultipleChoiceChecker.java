@@ -2,7 +2,7 @@ package com.deved.quiz;
 
 import java.util.Scanner;
 
-public class AnswerChecker {
+public class MultipleChoiceChecker {
     public int checkAnswers(QuizQuestion[] questions) {
         int score = 0;
         int points = 0;

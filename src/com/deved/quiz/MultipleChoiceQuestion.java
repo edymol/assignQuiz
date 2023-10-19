@@ -1,8 +1,6 @@
 package com.deved.quiz;
 
-import java.util.Scanner;
-
-public class MultipleChoiceQuestion extends AnswerChecker {
+public class MultipleChoiceQuestion extends MultipleChoiceChecker {
 
 //    public MultipleChoiceQuestion(String question,
 //                                  String a,
